@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ai-headshot-sage.vercel.app/
+Host: https://ai-headshot-sage.vercel.app
 
 # Sitemaps
 Sitemap: https://ai-headshot-sage.vercel.app/sitemap.xml
