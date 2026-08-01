@@ -60,6 +60,24 @@ export default function RootLayout({
     return (
         <html lang="en" className={inter.variable}>
             <head>
+                <link rel="alternate" hrefLang="en-us" href={`${siteUrl}/`} />
+                <link rel="alternate" hrefLang="en-gb" href={`${siteUrl}/`} />
+                <link rel="alternate" hrefLang="en-ca" href={`${siteUrl}/`} />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "WebSite",
+                            url: siteUrl,
+                            potentialAction: {
+                                "@type": "SearchAction",
+                                target: `${siteUrl}/search?q={search_term_string}`,
+                                "query-input": "required name=search_term_string",
+                            },
+                        }),
+                    }}
+                />
                 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </head>
